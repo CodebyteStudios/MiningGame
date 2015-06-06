@@ -11,13 +11,11 @@
             }
             
             #uiContainer {
+                position: static;
+                top: 0; left: 0;
+                margin: 0 auto;
                 display: inline-block;
-                opacity: 0.25;
                 padding: 4px;
-            }
-            
-            #uiContainer:hover {
-                opacity: 1;
             }
             
             #yourName, #friendsName, #message, #messages, button {
@@ -32,6 +30,7 @@
             }
             
             #message {
+                clear: left;
                 width: 268px;
                 height: 16px;
             }
@@ -39,7 +38,6 @@
             #messages {
                 width: 402px;
                 height: 128px;
-                clear: left;
                 resize: vertical;
                 background-color: rgba(255, 255, 255, 0.5);
             }
@@ -59,9 +57,9 @@
                 <button onclick="connect()">Connect</button>
             </div>
             <div id="send" style="clear: left; display: none;">
+                <textarea id="messages" readonly></textarea>
                 <input id="message" type="text" placeholder="Message..."/>
                 <button onclick="sendMessage()">Send</button>
-                <textarea id="messages" readonly></textarea>
             </div>
         </div>
     </body>
