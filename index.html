@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="js/phaser.min.js"></script>
+        <script type="text/javascript" src="js/peer.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+            
+            body {
+                margin: 0;
+            }
+            
+            #uiContainer {
+                display: inline-block;
+                opacity: 0.25;
+                padding: 4px;
+            }
+            
+            #uiContainer:hover {
+                opacity: 1;
+            }
+            
+            #yourName, #friendsName, #message, #messages, button {
+                 display: block;
+                 margin: 4px;
+                 float: left;
+            }
+            
+            #yourName, #friendsName {
+                width: 128px;
+                height: 16px;
+            }
+            
+            #message {
+                width: 268px;
+                height: 16px;
+            }
+            
+            #messages {
+                width: 402px;
+                height: 128px;
+                clear: left;
+                resize: vertical;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            
+            button {
+                width: 128px;
+                height: 22px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="uiContainer">
+            <div id="connect" style="clear: right; display: block;">
+                <input id="yourName" type="text" placeholder="Your name"/>
+                <input id="friendsName" type="text" placeholder="Friends name"/>
+                <button onclick="connect()">Connect</button>
+            </div>
+            <div id="send" style="clear: left; display: none;">
+                <input id="message" type="text" placeholder="Message..."/>
+                <button onclick="sendMessage()">Send</button>
+                <textarea id="messages" readonly></textarea>
+            </div>
+        </div>
+    </body>
+</html>
